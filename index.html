@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="title-area">
+            <h1>SIMON</h1>
+            <p class="subtitle">Group 6</p>
+        </div>
+
+        <div class="high-score-display" id="highScoreDisplay">
+            Best: <span id="highScoreValue">0</span>
+        </div>
+
+        <div class="game-container" id="gameContainer">
+            <div class="board">
+                <button class="btn-simon btn-red" id="btnRed" data-color="red" aria-label="Red button"></button>
+                <button class="btn-simon btn-blue" id="btnBlue" data-color="blue" aria-label="Blue button"></button>
+                <button class="btn-simon btn-yellow" id="btnYellow" data-color="yellow" aria-label="Yellow button"></button>
+                <button class="btn-simon btn-green" id="btnGreen" data-color="green" aria-label="Green button"></button>
+            </div>
+
+            <div class="center-console">
+                <span class="brand">SIMON</span>
+                <span class="level-label">Level</span>
+                <span class="level-value" id="levelDisplay">0</span>
+            </div>
+
+            <button class="btn-start" id="btnStart" title="Start Game">▶&nbsp; Start</button>
+
+            <div class="message-area">
+                <span class="message-text" id="messageText">Press Start to play</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay hidden" id="gameOverOverlay">
+        <div class="overlay-card">
+            <h2>Game Over</h2>
+            <p class="stat-line">You reached</p>
+            <p class="final-score" id="finalScore">Level 0</p>
+            <p class="stat-line" id="finalHighScore">Best: Level 0</p>
+            <button class="btn-restart" id="btnRestart">🔄&nbsp; Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
